@@ -1,4 +1,8 @@
 import React from 'react'
+import { Hue } from './components/hue'
+import { Lightness } from './components/lightness'
+import { Saturation } from './components/saturation'
+
 export function App() {
   return (
     <div>
@@ -8,19 +12,15 @@ export function App() {
           <div className="colorpreview"></div>
         </aside>
         <div className="sliders">
-          <div className="hue">
-            H <input type="range" />
+          <div>
+            H <Hue />
           </div>
-          <div className="saturation">
-            S <input type="range" />
+          <div>
+            S <Saturation />
           </div>
-          <div className="lightness">
+          <div>
             L
-            <input type="range" />
-          </div>
-          <div className="alpha">
-            A
-            <input type="range" />
+            <Lightness />
           </div>
         </div>
       </main>
