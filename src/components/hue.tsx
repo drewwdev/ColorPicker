@@ -10,14 +10,18 @@ export function Hue() {
 
     setHue(Number(sliderHue))
   }
+
   return (
-    <input
-      type="range"
-      min="0"
-      max="360"
-      step="1"
-      value={hue}
-      onInput={_hueRangeInput}
-    />
+    <div>
+      <input
+        type="range"
+        min="0"
+        max="360"
+        step="1"
+        value={hue}
+        onInput={_hueRangeInput}
+      />
+      {hue}
+    </div>
   )
 }

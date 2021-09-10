@@ -8,6 +8,7 @@ export default defineConfig((configEnv) => ({
     reactRefresh(),
     checker({ typescript: true }),
     linterPlugin({
+      disableForBuild: true,
       include: ['./src/**/*.ts', './src/**/*.tsx'],
       linters: [
         new EsLinter({

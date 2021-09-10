@@ -11,13 +11,16 @@ export function Saturation() {
     setSaturation(Number(sliderSaturation))
   }
   return (
-    <input
-      type="range"
-      min="0"
-      max="100"
-      step="1"
-      value={saturation}
-      onInput={_saturationRangeInput}
-    />
+    <div>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+        value={saturation}
+        onInput={_saturationRangeInput}
+      />
+      {saturation}%
+    </div>
   )
 }

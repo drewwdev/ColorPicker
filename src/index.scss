@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 :root {
   font: 16px;
   font-family: 'Roboto', sans-serif;
@@ -52,4 +51,7 @@ div {
   border: white;
   border-width: 0.5rem;
   border-style: solid;
+}
+p {
+  margin: 0;
 }

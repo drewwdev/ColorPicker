@@ -1,7 +1,7 @@
 import React from 'react'
 import { Hue } from './components/hue'
-import { Lightness } from './components/lightness'
 import { Saturation } from './components/saturation'
+import { Lightness } from './components/lightness'
 
 export function App() {
   return (
@@ -19,8 +19,7 @@ export function App() {
             S <Saturation />
           </div>
           <div>
-            L
-            <Lightness />
+            L <Lightness />
           </div>
         </div>
       </main>
