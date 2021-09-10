@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 export function App() {
-  const [hue, setHue] = useState(180)
-  const [saturation, setSaturation] = useState(50)
-  const [lightness, setLightness] = useState(50)
+  const [hue, setHue] = useState(Math.floor(Math.random() * 361))
+  const [saturation, setSaturation] = useState(Math.floor(Math.random() * 101))
+  const [lightness, setLightness] = useState(Math.floor(Math.random() * 101))
 
   const newBackgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`
   const newStyle = { backgroundColor: newBackgroundColor }
@@ -29,7 +29,11 @@ export function App() {
 
     setSaturation(Number(sliderSaturation))
   }
-
+  function _buttonClick() {
+    setHue(Math.floor(Math.random() * 361))
+    setSaturation(Math.floor(Math.random() * 101))
+    setLightness(Math.floor(Math.random() * 101))
+  }
   return (
     <div>
       <main>
@@ -80,6 +84,7 @@ export function App() {
               {saturation}%
             </div>
           </div>
+          <button onClick={_buttonClick}>Randomize</button>
         </div>
       </main>
     </div>
